@@ -211,3 +211,12 @@ divisores3 a b
   |b == 1 = [b]
   |mod a b == 0 = [b] ++ divisores3 a (b - 1)
   |mod a b /= 0 = divisores3 a (b - 1)
+
+somaListas :: [[Int]] -> Int
+  somaListas[] = 0
+  somaListas(a:b) = somaValores a + somaListas b
+
+somaValores :: [Int] -> Int
+  somaValores[] = 0
+  somaValores (a:b) = a + somaValores b
+  
